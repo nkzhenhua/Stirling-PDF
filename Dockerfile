@@ -30,6 +30,7 @@ COPY ./pipeline/ /pipeline/
 COPY src/main/resources/static/fonts/*.ttf /usr/share/fonts/opentype/noto/
 COPY src/main/resources/static/fonts/*.otf /usr/share/fonts/opentype/noto/
 COPY build/libs/*.jar app.jar
+COPY ./configs/settings.yml /configs/
 
 # Set font cache and permissions
 RUN fc-cache -f -v && chmod +x /scripts/*
